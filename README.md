@@ -191,7 +191,7 @@ For autonomous claim/submit/monitor workflow tooling, see:
 
 ## RustChain Overview
 
-RustChain uses **RIP-200 Proof-of-Attestation** consensus:
+RustChain uses **RIP-200 Proof-of-Antiquity** consensus:
 
 - **1 CPU = 1 Vote** - No GPU advantage, no ASIC dominance
 - **Hardware fingerprinting** - Real hardware only, VMs earn nothing
