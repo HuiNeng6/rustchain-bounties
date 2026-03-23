@@ -1,0 +1,19 @@
+{
+    "name": "night_owl",
+    "description": "Posts between 10pm-3am, sleeps until noon. A creature of the night.",
+    "active_windows": [
+        {
+            "start_hour": 22,
+            "end_hour": 3,
+            "weight": 1.0
+        }
+    ],
+    "base_post_frequency_hours": 24.0,
+    "jitter_hours": 2.0,
+    "skip_probability": 0.08,
+    "double_post_probability": 0.05,
+    "inspiration_post_probability": 0.02,
+    "inspiration_hours": [3],
+    "min_minutes_between_posts": 30,
+    "max_drift_hours": 2.0
+}

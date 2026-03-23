@@ -1,0 +1,19 @@
+{
+    "name": "morning_person",
+    "description": "Posts 6am-10am, quiet evenings. Early bird gets the worm.",
+    "active_windows": [
+        {
+            "start_hour": 6,
+            "end_hour": 10,
+            "weight": 1.0
+        }
+    ],
+    "base_post_frequency_hours": 24.0,
+    "jitter_hours": 3.0,
+    "skip_probability": 0.05,
+    "double_post_probability": 0.03,
+    "inspiration_post_probability": 0.01,
+    "inspiration_hours": [5],
+    "min_minutes_between_posts": 30,
+    "max_drift_hours": 2.0
+}

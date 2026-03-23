@@ -1,0 +1,19 @@
+{
+    "name": "consistent_but_human",
+    "description": "Roughly daily but ±4 hours jitter. Reliable but not robotic.",
+    "active_windows": [
+        {
+            "start_hour": 9,
+            "end_hour": 23,
+            "weight": 1.0
+        }
+    ],
+    "base_post_frequency_hours": 24.0,
+    "jitter_hours": 4.0,
+    "skip_probability": 0.07,
+    "double_post_probability": 0.04,
+    "inspiration_post_probability": 0.02,
+    "inspiration_hours": [3],
+    "min_minutes_between_posts": 30,
+    "max_drift_hours": 2.0
+}

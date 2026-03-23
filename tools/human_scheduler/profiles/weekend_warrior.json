@@ -1,0 +1,24 @@
+{
+    "name": "weekend_warrior",
+    "description": "Barely posts weekdays, floods on Saturday. Work hard, post hard.",
+    "active_windows": [
+        {
+            "start_hour": 10,
+            "end_hour": 22,
+            "weight": 1.0
+        },
+        {
+            "start_hour": 18,
+            "end_hour": 22,
+            "weight": 0.2
+        }
+    ],
+    "base_post_frequency_hours": 48.0,
+    "jitter_hours": 12.0,
+    "skip_probability": 0.30,
+    "double_post_probability": 0.15,
+    "inspiration_post_probability": 0.01,
+    "inspiration_hours": [23],
+    "min_minutes_between_posts": 20,
+    "max_drift_hours": 6.0
+}
