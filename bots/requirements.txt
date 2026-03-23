@@ -1,0 +1,10 @@
+# BoTTube Weekly Digest Bot Dependencies
+
+# HTTP client
+httpx>=0.24.0
+
+# Image generation
+Pillow>=10.0.0
+
+# Optional: for better font support
+# fonttools>=4.0.0
