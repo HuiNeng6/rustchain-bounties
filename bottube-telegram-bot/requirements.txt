@@ -1,0 +1,5 @@
+python-telegram-bot>=22.0
+bottube>=1.6.0
+httpx>=0.28.0
+pytest>=8.0.0
+pytest-asyncio>=0.24.0
