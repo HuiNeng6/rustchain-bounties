@@ -1,0 +1,6 @@
+/target/
+/Cargo.lock
+*.img
+*.rcw
+*.png
+*.tmp

@@ -1,0 +1,40 @@
+[package]
+name = "rustchain-witness"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+authors = ["RustChain Contributors"]
+description = "Floppy Witness Kit — Compact epoch proofs for 1.44MB media"
+license = "MIT"
+repository = "https://github.com/Scottcjn/rustchain-bounties"
+homepage = "https://github.com/Scottcjn/Rustchain"
+documentation = "https://github.com/Scottcjn/rustchain-bounties/tree/main/rustchain-witness"
+keywords = ["blockchain", "witness", "floppy", "retro-computing", "rustchain"]
+categories = ["command-line-utilities", "cryptography::cryptocurrencies"]
+readme = "README.md"
+
+[lib]
+name = "rustchain_witness"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rustchain-witness"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+bincode = "1.3"
+sha2 = "0.10"
+hex = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+reqwest = { version = "0.12", features = ["blocking", "json", "rustls-tls"], default-features = false }
+anyhow = "1.0"
+thiserror = "1.0"
+qrcode = "0.14"
+image = "0.25"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
