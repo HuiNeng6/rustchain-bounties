@@ -10,7 +10,7 @@ Miners must request a fresh **Nonce** from the node before every submission. Non
 - **Endpoint**: `POST /attest/challenge`
 - **Response**: `{ "nonce": "...", "server_time": 1771038696 }`
 
-### 2. Hardware Fingerprinting (The 6+1 Checks)
+### 2. Hardware Fingerprinting (The 7+1 Checks)
 The miner client executes a suite of checks to prove its physical identity. If any check fails, the miner is flagged as "Flagged" and receives a **0x multiplier** (or a 1-billionth penalty).
 
 | Check ID | Name | Description |
@@ -21,6 +21,7 @@ The miner client executes a suite of checks to prove its physical identity. If a
 | **Check 4** | **Thermal Drift Entropy** | Captures fluctuations in processing speed caused by thermal throttling and ambient environment. |
 | **Check 5** | **Instruction Path Jitter** | Measures microscopic variations in the execution time of complex instruction sequences. |
 | **Check 6** | **Anti-Emulation / VM Detection** | Deep scan for virtualization artifacts, hypervisor signatures, and emulated device drivers. |
+| **Check 7** | **CRT Light Attestation** | Captures unique light signatures from CRT displays using camera-based refresh pattern analysis. |
 | **+1 Bonus** | **Physical Context** | Weighted verification of hardware serials and MAC consistency against manufacturing databases. |
 
 ### 3. Submission Phase
