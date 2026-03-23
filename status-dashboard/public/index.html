@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RustChain Status - Node Health Dashboard</title>
+  <meta name="description" content="Real-time monitoring for all RustChain attestation nodes">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛓️</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">⛓️</span>
+        <span class="logo-text">RustChain Status</span>
+      </div>
+      <div class="header-info">
+        <span id="last-update">Last update: --</span>
+        <span class="auto-refresh">Auto-refresh: 60s</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Overall Status Banner -->
+    <section class="status-banner" id="status-banner">
+      <div class="status-icon" id="overall-status-icon">●</div>
+      <div class="status-text" id="overall-status-text">Loading...</div>
+    </section>
+
+    <!-- Node Cards Grid -->
+    <section class="nodes-section">
+      <h2>Network Nodes</h2>
+      <div class="nodes-grid" id="nodes-grid">
+        <!-- Node cards will be injected here -->
+      </div>
+    </section>
+
+    <!-- Uptime Timeline -->
+    <section class="timeline-section">
+      <h2>24-Hour Uptime Timeline</h2>
+      <div class="timeline-container" id="timeline-container">
+        <!-- Timeline will be rendered here -->
+      </div>
+      <div class="timeline-legend">
+        <span class="legend-item"><span class="legend-box up"></span> Up</span>
+        <span class="legend-item"><span class="legend-box down"></span> Down</span>
+        <span class="legend-item"><span class="legend-box unknown"></span> Unknown</span>
+      </div>
+    </section>
+
+    <!-- Response Time Chart -->
+    <section class="chart-section">
+      <h2>Response Time (Last 24 Hours)</h2>
+      <div class="chart-container">
+        <canvas id="response-time-chart"></canvas>
+      </div>
+    </section>
+
+    <!-- Incident Log -->
+    <section class="incidents-section">
+      <div class="incidents-header">
+        <h2>Recent Incidents</h2>
+        <div class="feed-links">
+          <a href="/api/incidents/rss" target="_blank" class="feed-link">
+            <span>📡</span> RSS Feed
+          </a>
+          <a href="/api/incidents/atom" target="_blank" class="feed-link">
+            <span>📡</span> Atom Feed
+          </a>
+        </div>
+      </div>
+      <div class="incidents-list" id="incidents-list">
+        <!-- Incident items will be injected here -->
+      </div>
+    </section>
+
+    <!-- Geographic Map -->
+    <section class="map-section">
+      <h2>Node Locations</h2>
+      <div class="map-container" id="map-container">
+        <!-- Simple SVG world map with node markers -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>
+        <a href="https://rustchain.org" target="_blank">RustChain</a> Status Dashboard | 
+        <a href="https://github.com/Scottcjn/RustChain" target="_blank">GitHub</a> |
+        <a href="https://discord.gg/VqVVS2CW9Q" target="_blank">Discord</a>
+      </p>
+      <p class="footer-wallet">RTC Wallet: 9dRRMiHiJwjF3VW8pXtKDtpmmxAPFy3zWgV2JY5H6eeT</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
