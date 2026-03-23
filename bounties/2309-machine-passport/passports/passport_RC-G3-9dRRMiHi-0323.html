@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RustChain Machine Passport - RC-G3-9dRRMiHi-0323</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --gold: #f4a300;
+            --text: #eaeaea;
+            --muted: #8b8b8b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .passport-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #1e1e3f 0%, #0f0f2d 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .passport-header {
+            background: linear-gradient(90deg, var(--accent) 0%, #ff6b6b 100%);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .passport-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .passport-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .passport-subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .passport-body {
+            padding: 40px;
+        }
+        
+        .id-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed var(--muted);
+        }
+        
+        .passport-id {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        .verification-badge {
+            background: var(--accent);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .qr-section {
+            text-align: center;
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 0 auto 15px;
+        }
+        
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .qr-label {
+            font-size: 0.9em;
+            color: var(--muted);
+        }
+        
+        .info-section h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .info-grid {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .info-label {
+            color: var(--muted);
+        }
+        
+        .info-value {
+            font-weight: bold;
+        }
+        
+        .arch-badge {
+            background: linear-gradient(135deg, var(--gold) 0%, #ff8c00 100%);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .stats-section {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 15px;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+        
+        .history-section {
+            margin-bottom: 30px;
+        }
+        
+        .history-section h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        
+        .history-table th,
+        .history-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .history-table th {
+            color: var(--muted);
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+        }
+        
+        .status-passed {
+            color: #4ade80;
+        }
+        
+        .status-failed {
+            color: #f87171;
+        }
+        
+        .wallet-address {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .passport-footer {
+            background: var(--primary);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85em;
+            color: var(--muted);
+        }
+        
+        .footer-links {
+            margin-top: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .id-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="passport-container">
+        <div class="passport-header">
+            <div class="passport-title">Machine Passport</div>
+            <div class="passport-subtitle">RustChain Vintage Hardware Identity Document</div>
+        </div>
+        
+        <div class="passport-body">
+            <div class="id-section">
+                <div class="passport-id">RC-G3-9dRRMiHi-0323</div>
+                <div class="verification-badge">
+                    ✓ Verified #d1ffd3ae55f18972
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <div class="qr-section">
+                    <div class="qr-code">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADPklEQVR4nO1cTY6rMAy2CVKXqdQDzFHCDXqk0TvS3IAcpQeoBMtKID/ZcYCZHSoqpfG3oAlglRjX/ykSrEas1tMAGJHCGKEwRiiMEQpjhMIYoTBGHIkRqKgB4pk9BRlhDdjAiAB9vqHZ5fFWwog2YEQgRgdJBPCbHojfHV/pT4QNOLmevVBj+QczotbP/gwQfgAoNjUQTwl6np5dugEB3PDyx6uMaC+JyEDw9xrBDzXE6wMpdJckG0vYeypIIkjMRPg5EfJFZCGhg62pMqINGOGJqOXXn3xH/0AInSNxMOQMEWWjYSwvQPaiRBIcZiT0p6wYeg04BHs93joY0fNWg6Y5AYgq4JjTDwDx68Gj34bDWP7BjIBFVBm6fK4Fl21F54haP0A6CNo3X1NlRE9LBLXsR+ho0PTEH7HgbIVeMJYrytARXs4sxWKhKExHlKIjqNNoQgIOkQ2dsspgj0IVhemIQnRESGLBZsLPBkOjzywWk2F58zVVRrSBjshIJyULoYdZPUyWxFiu+HCJALUV06ibXIicoUo3mkQUUg0HSUBwSkoMRiqEc3FcqqDYzFmrQ6xpJYwoQ3/2PhsHiUNTAmLhTIjBMB1RVDW8TiEFd8fwnMtdSSWMSNBfCOL5DhjaA6ypMqItok+XvIeFUuBR9jYlCDEdUY7sYeMfmG2FtNHVyZVM1a/QjUh0Mz/ikC/3iVgD5gQEq4fFIWW2TUeUlMX2kp8U+zHnI36lKxcFjzdfU2VEG3Tedtm9jF8sID0i/cMT+xaOnUq2JKko+uw3rYMR7dt5SyM3Vo58zg0gLZYRpWeCm24tH1GEwMKcpBRoPiJNxH5MvXQ+1z/MahRV1wi5fDG7kjrNbZcmEQVYDdSZGyCi4zbssc4jRn8ZpBuXDrGmyog23NNFqfLNPuaUptKOS5TdXc9+0zoY0a5+RMiJy5yrWnZcmh9R6A4eAYYb7+Dx9xrA35HitQOEvh7MapQoEZ5STz7FqyMMN9nYVQ8UG655vfjxKiPaSyI8v2zZ3tlfhqQjODPBO4FT+Gk7gQvsxYapxDk1VmowOvkW1kP18URo/0x2iPdUGVGCMUJhjFAYIxTGCIUxQvE6z/I/raCkbyrcleAAAAAASUVORK5CYII=" alt="Verification QR Code">
+                    </div>
+                    <div class="qr-label">Scan to verify on-chain</div>
+                    <div class="wallet-address">
+                        <strong>Wallet:</strong><br>9dRRMiHiJwjF3VW8pXtKDtpmmxAPFy3zWgV2JY5H6eeT
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hardware Profile</h3>
+                    <div class="info-grid">
+                        <div class="info-row">
+                            <span class="info-label">Device Name</span>
+                            <span class="info-value">iMac G3 DV</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Architecture</span>
+                            <span class="info-value">
+                                <span class="arch-badge">G3</span>
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">CPU Model</span>
+                            <span class="info-value">PowerPC 750 @ 400MHz</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Cores / RAM</span>
+                            <span class="info-value">1 cores / 0.5 GB</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">OS Type</span>
+                            <span class="info-value">Linux</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Antiquity Bonus</span>
+                            <span class="info-value">1.8xx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Total Attestations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100.0%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.500000</div>
+                        <div class="stat-label">RTC Earned</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Active Days</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="history-section">
+                <h3>Recent Attestations</h3>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Epoch</th>
+                            <th>Status</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td>2026-03-23 11:20:08</td>
+            <td>73</td>
+            <td class="status-passed">✓ Passed</td>
+            <td>0.80</td>
+        </tr>
+        <tr>
+            <td>2026-03-23 11:20:08</td>
+            <td>74</td>
+            <td class="status-passed">✓ Passed</td>
+            <td>0.83</td>
+        </tr>
+        <tr>
+            <td>2026-03-23 11:20:08</td>
+            <td>75</td>
+            <td class="status-passed">✓ Passed</td>
+            <td>0.86</td>
+        </tr>
+        <tr>
+            <td>2026-03-23 11:20:08</td>
+            <td>76</td>
+            <td class="status-passed">✓ Passed</td>
+            <td>0.89</td>
+        </tr>
+        <tr>
+            <td>2026-03-23 11:20:08</td>
+            <td>77</td>
+            <td class="status-passed">✓ Passed</td>
+            <td>0.92</td>
+        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="passport-footer">
+            <div>RustChain Machine Passport v1.0 | First Online: 2026-03-23</div>
+            <div class="footer-links">
+                <a href="https://rustchain.org/passport/RC-G3-9dRRMiHi-0323">View on RustChain</a>
+                <a href="https://rustchain.org/verify/d1ffd3ae55f18972">Verify Authenticity</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

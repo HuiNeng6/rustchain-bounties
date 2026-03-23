@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RustChain Machine Passport Ledger</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --gold: #f4a300;
+            --text: #eaeaea;
+            --muted: #8b8b8b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+        
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            color: var(--gold);
+        }
+        
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9em;
+        }
+        
+        .passports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .passport-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .passport-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .passport-id {
+            color: var(--gold);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .arch-badge {
+            background: linear-gradient(135deg, var(--gold) 0%, #ff8c00 100%);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .card-info {
+            display: grid;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+        }
+        
+        .info-label {
+            color: var(--muted);
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .rtc-earned {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .view-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .view-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Passport Ledger</h1>
+        <p class="subtitle">RustChain Vintage Hardware Identity Registry</p>
+        
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Total Passports</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Active Machines</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">25</div>
+                <div class="stat-label">Total Attestations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">26.25</div>
+                <div class="stat-label">Total RTC Earned</div>
+            </div>
+        </div>
+        
+        <div class="passports-grid">
+
+            <div class="passport-card">
+                <div class="card-header">
+                    <span class="passport-id">RC-G5-9dRRMiHi-0323</span>
+                    <span class="arch-badge">G5</span>
+                </div>
+                <div class="card-info">
+                    <div class="info-row">
+                        <span class="info-label">Device</span>
+                        <span>PowerMac G5 Quad</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CPU</span>
+                        <span>PowerPC 970MP @ 2.5GHz...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Attestations</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="rtc-earned">5.0000 RTC</span>
+                    <a href="passport_RC-G5-9dRRMiHi-0323.html" class="view-link">View Passport →</a>
+                </div>
+            </div>
+
+            <div class="passport-card">
+                <div class="card-header">
+                    <span class="passport-id">RC-G4-9dRRMiHi-0323</span>
+                    <span class="arch-badge">G4</span>
+                </div>
+                <div class="card-info">
+                    <div class="info-row">
+                        <span class="info-label">Device</span>
+                        <span>PowerBook G4 Titanium</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CPU</span>
+                        <span>PowerPC 7455 @ 1GHz...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Attestations</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="rtc-earned">6.2500 RTC</span>
+                    <a href="passport_RC-G4-9dRRMiHi-0323.html" class="view-link">View Passport →</a>
+                </div>
+            </div>
+
+            <div class="passport-card">
+                <div class="card-header">
+                    <span class="passport-id">RC-G3-9dRRMiHi-0323</span>
+                    <span class="arch-badge">G3</span>
+                </div>
+                <div class="card-info">
+                    <div class="info-row">
+                        <span class="info-label">Device</span>
+                        <span>iMac G3 DV</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CPU</span>
+                        <span>PowerPC 750 @ 400MHz...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Attestations</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="rtc-earned">4.5000 RTC</span>
+                    <a href="passport_RC-G3-9dRRMiHi-0323.html" class="view-link">View Passport →</a>
+                </div>
+            </div>
+
+            <div class="passport-card">
+                <div class="card-header">
+                    <span class="passport-id">RC-SPA-ExampleW-0323</span>
+                    <span class="arch-badge">SPARC</span>
+                </div>
+                <div class="card-info">
+                    <div class="info-row">
+                        <span class="info-label">Device</span>
+                        <span>Sun SPARCstation 20</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CPU</span>
+                        <span>SuperSPARC II @ 75MHz...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Attestations</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="rtc-earned">5.5000 RTC</span>
+                    <a href="passport_RC-SPA-ExampleW-0323.html" class="view-link">View Passport →</a>
+                </div>
+            </div>
+
+            <div class="passport-card">
+                <div class="card-header">
+                    <span class="passport-id">RC-MIP-ExampleW-0323</span>
+                    <span class="arch-badge">MIPS</span>
+                </div>
+                <div class="card-info">
+                    <div class="info-row">
+                        <span class="info-label">Device</span>
+                        <span>SGI Indy</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CPU</span>
+                        <span>R4600 @ 133MHz...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Attestations</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="rtc-earned">5.0000 RTC</span>
+                    <a href="passport_RC-MIP-ExampleW-0323.html" class="view-link">View Passport →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

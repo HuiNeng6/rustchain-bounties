@@ -1,0 +1,386 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-23T11:20:08.291150",
+  "passports": {
+    "RC-G5-9dRRMiHi-0323": {
+      "passport_id": "RC-G5-9dRRMiHi-0323",
+      "passport_uuid": "b4e7882f-a0b0-47b1-aaba-970d269f1866",
+      "wallet_address": "NewOwnerWallet123456789",
+      "device_name": "PowerMac G5 Quad",
+      "device_family": "PowerPC",
+      "device_arch": "g5",
+      "cpu_model": "PowerPC 970MP @ 2.5GHz",
+      "cpu_cores": 4,
+      "ram_gb": 16,
+      "os_type": "Linux",
+      "first_online": "2026-03-23T11:20:08.246227",
+      "last_attestation": "2026-03-23T11:20:08.254986",
+      "is_active": true,
+      "total_attestations": 5,
+      "successful_attestations": 5,
+      "total_rtc_earned": 5.0,
+      "antiquity_multiplier": 2.0,
+      "attestation_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.249928",
+          "epoch": 73,
+          "slot": 10554,
+          "passed": true,
+          "device_arch": "g5",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.251515",
+          "epoch": 74,
+          "slot": 10698,
+          "passed": true,
+          "device_arch": "g5",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8300000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.253290",
+          "epoch": 75,
+          "slot": 10842,
+          "passed": true,
+          "device_arch": "g5",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8600000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.254165",
+          "epoch": 76,
+          "slot": 10986,
+          "passed": true,
+          "device_arch": "g5",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.89
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.254979",
+          "epoch": 77,
+          "slot": 11130,
+          "passed": true,
+          "device_arch": "g5",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.92
+        }
+      ],
+      "maintenance_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.283816",
+          "event_type": "upgrade",
+          "description": "Upgraded RAM from 8GB to 16GB",
+          "technician": null,
+          "cost_rtc": 0.5
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.287949",
+          "event_type": "cleaning",
+          "description": "Cleaned dust from heatsinks and fans",
+          "technician": null,
+          "cost_rtc": null
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.289580",
+          "event_type": "firmware",
+          "description": "Updated Open Firmware to latest version",
+          "technician": null,
+          "cost_rtc": null
+        }
+      ],
+      "ownership_history": [
+        {
+          "from_wallet": "9dRRMiHiJwjF3VW8pXtKDtpmmxAPFy3zWgV2JY5H6eeT",
+          "to_wallet": "NewOwnerWallet123456789",
+          "timestamp": "2026-03-23T11:20:08.291125",
+          "transfer_type": "sale",
+          "price_rtc": 15.0
+        }
+      ],
+      "verification_hash": "6de7a32f36173569",
+      "qr_code_data": "https://rustchain.org/passport/RC-G5-9dRRMiHi-0323?verify=48adae11fb8217bf"
+    },
+    "RC-G4-9dRRMiHi-0323": {
+      "passport_id": "RC-G4-9dRRMiHi-0323",
+      "passport_uuid": "c1251dd7-cec3-4762-a2b3-aac1bad05157",
+      "wallet_address": "9dRRMiHiJwjF3VW8pXtKDtpmmxAPFy3zWgV2JY5H6eeT",
+      "device_name": "PowerBook G4 Titanium",
+      "device_family": "PowerPC",
+      "device_arch": "g4",
+      "cpu_model": "PowerPC 7455 @ 1GHz",
+      "cpu_cores": 1,
+      "ram_gb": 1,
+      "os_type": "Linux",
+      "first_online": "2026-03-23T11:20:08.247084",
+      "last_attestation": "2026-03-23T11:20:08.259653",
+      "is_active": true,
+      "total_attestations": 5,
+      "successful_attestations": 5,
+      "total_rtc_earned": 6.25,
+      "antiquity_multiplier": 2.5,
+      "attestation_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.255795",
+          "epoch": 73,
+          "slot": 10554,
+          "passed": true,
+          "device_arch": "g4",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.256632",
+          "epoch": 74,
+          "slot": 10698,
+          "passed": true,
+          "device_arch": "g4",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8300000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.257796",
+          "epoch": 75,
+          "slot": 10842,
+          "passed": true,
+          "device_arch": "g4",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8600000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.258713",
+          "epoch": 76,
+          "slot": 10986,
+          "passed": true,
+          "device_arch": "g4",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.89
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.259647",
+          "epoch": 77,
+          "slot": 11130,
+          "passed": true,
+          "device_arch": "g4",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.92
+        }
+      ],
+      "maintenance_history": [],
+      "ownership_history": [],
+      "verification_hash": "e4146419f8133f45",
+      "qr_code_data": "https://rustchain.org/passport/RC-G4-9dRRMiHi-0323?verify=762e7147ba2cb02c"
+    },
+    "RC-G3-9dRRMiHi-0323": {
+      "passport_id": "RC-G3-9dRRMiHi-0323",
+      "passport_uuid": "ac967703-30fc-442f-a6f3-2d061a6efdaa",
+      "wallet_address": "9dRRMiHiJwjF3VW8pXtKDtpmmxAPFy3zWgV2JY5H6eeT",
+      "device_name": "iMac G3 DV",
+      "device_family": "PowerPC",
+      "device_arch": "g3",
+      "cpu_model": "PowerPC 750 @ 400MHz",
+      "cpu_cores": 1,
+      "ram_gb": 0.5,
+      "os_type": "Linux",
+      "first_online": "2026-03-23T11:20:08.248498",
+      "last_attestation": "2026-03-23T11:20:08.264949",
+      "is_active": true,
+      "total_attestations": 5,
+      "successful_attestations": 5,
+      "total_rtc_earned": 4.5,
+      "antiquity_multiplier": 1.8,
+      "attestation_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.260651",
+          "epoch": 73,
+          "slot": 10554,
+          "passed": true,
+          "device_arch": "g3",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.261701",
+          "epoch": 74,
+          "slot": 10698,
+          "passed": true,
+          "device_arch": "g3",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8300000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.262731",
+          "epoch": 75,
+          "slot": 10842,
+          "passed": true,
+          "device_arch": "g3",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.8600000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.263801",
+          "epoch": 76,
+          "slot": 10986,
+          "passed": true,
+          "device_arch": "g3",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.89
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.264941",
+          "epoch": 77,
+          "slot": 11130,
+          "passed": true,
+          "device_arch": "g3",
+          "device_family": "PowerPC",
+          "fingerprint_score": 0.92
+        }
+      ],
+      "maintenance_history": [],
+      "ownership_history": [],
+      "verification_hash": "d1ffd3ae55f18972",
+      "qr_code_data": "https://rustchain.org/passport/RC-G3-9dRRMiHi-0323?verify=a91ae9ea39822038"
+    },
+    "RC-SPA-ExampleW-0323": {
+      "passport_id": "RC-SPA-ExampleW-0323",
+      "passport_uuid": "23f04445-ce04-486e-83de-95923d845484",
+      "wallet_address": "ExampleWallet123456789",
+      "device_name": "Sun SPARCstation 20",
+      "device_family": "SPARC",
+      "device_arch": "sparc",
+      "cpu_model": "SuperSPARC II @ 75MHz",
+      "cpu_cores": 1,
+      "ram_gb": 0.25,
+      "os_type": "NetBSD",
+      "first_online": "2026-03-23T11:20:08.249002",
+      "last_attestation": "2026-03-23T11:20:08.275035",
+      "is_active": true,
+      "total_attestations": 5,
+      "successful_attestations": 5,
+      "total_rtc_earned": 5.5,
+      "antiquity_multiplier": 2.2,
+      "attestation_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.266397",
+          "epoch": 73,
+          "slot": 10554,
+          "passed": true,
+          "device_arch": "sparc",
+          "device_family": "SPARC",
+          "fingerprint_score": 0.8
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.271144",
+          "epoch": 74,
+          "slot": 10698,
+          "passed": true,
+          "device_arch": "sparc",
+          "device_family": "SPARC",
+          "fingerprint_score": 0.8300000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.272534",
+          "epoch": 75,
+          "slot": 10842,
+          "passed": true,
+          "device_arch": "sparc",
+          "device_family": "SPARC",
+          "fingerprint_score": 0.8600000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.273781",
+          "epoch": 76,
+          "slot": 10986,
+          "passed": true,
+          "device_arch": "sparc",
+          "device_family": "SPARC",
+          "fingerprint_score": 0.89
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.275028",
+          "epoch": 77,
+          "slot": 11130,
+          "passed": true,
+          "device_arch": "sparc",
+          "device_family": "SPARC",
+          "fingerprint_score": 0.92
+        }
+      ],
+      "maintenance_history": [],
+      "ownership_history": [],
+      "verification_hash": "21133350be007fd4",
+      "qr_code_data": "https://rustchain.org/passport/RC-SPA-ExampleW-0323?verify=6cc587c505065169"
+    },
+    "RC-MIP-ExampleW-0323": {
+      "passport_id": "RC-MIP-ExampleW-0323",
+      "passport_uuid": "8f9f5463-60c7-490a-8bba-0421d63a4f4d",
+      "wallet_address": "ExampleWallet987654321",
+      "device_name": "SGI Indy",
+      "device_family": "MIPS",
+      "device_arch": "mips",
+      "cpu_model": "R4600 @ 133MHz",
+      "cpu_cores": 1,
+      "ram_gb": 0.128,
+      "os_type": "IRIX",
+      "first_online": "2026-03-23T11:20:08.249451",
+      "last_attestation": "2026-03-23T11:20:08.282261",
+      "is_active": true,
+      "total_attestations": 5,
+      "successful_attestations": 5,
+      "total_rtc_earned": 5.0,
+      "antiquity_multiplier": 2.0,
+      "attestation_history": [
+        {
+          "timestamp": "2026-03-23T11:20:08.276363",
+          "epoch": 73,
+          "slot": 10554,
+          "passed": true,
+          "device_arch": "mips",
+          "device_family": "MIPS",
+          "fingerprint_score": 0.8
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.277710",
+          "epoch": 74,
+          "slot": 10698,
+          "passed": true,
+          "device_arch": "mips",
+          "device_family": "MIPS",
+          "fingerprint_score": 0.8300000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.279079",
+          "epoch": 75,
+          "slot": 10842,
+          "passed": true,
+          "device_arch": "mips",
+          "device_family": "MIPS",
+          "fingerprint_score": 0.8600000000000001
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.280445",
+          "epoch": 76,
+          "slot": 10986,
+          "passed": true,
+          "device_arch": "mips",
+          "device_family": "MIPS",
+          "fingerprint_score": 0.89
+        },
+        {
+          "timestamp": "2026-03-23T11:20:08.282251",
+          "epoch": 77,
+          "slot": 11130,
+          "passed": true,
+          "device_arch": "mips",
+          "device_family": "MIPS",
+          "fingerprint_score": 0.92
+        }
+      ],
+      "maintenance_history": [],
+      "ownership_history": [],
+      "verification_hash": "c835e6189950d3c5",
+      "qr_code_data": "https://rustchain.org/passport/RC-MIP-ExampleW-0323?verify=54e6e65aaf17340d"
+    }
+  }
+}
