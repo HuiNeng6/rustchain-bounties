@@ -225,6 +225,7 @@ fn print_fingerprint_summary(fp: &fingerprint::FingerprintResult) {
         ("thermal_drift", "Thermal Drift Entropy"),
         ("instruction_jitter", "Instruction Path Jitter"),
         ("anti_emulation", "Anti-Emulation / VM Detection"),
+        ("boot_chime", "Boot Chime Acoustic Fingerprint"),
     ];
 
     for (key, name) in &check_order {

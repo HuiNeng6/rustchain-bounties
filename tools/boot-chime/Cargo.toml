@@ -1,0 +1,16 @@
+[package]
+name = "boot-chime"
+version = "0.1.0"
+edition = "2021"
+description = "Boot Chime Acoustic Fingerprint Tool for RustChain Proof-of-Iron"
+license = "MIT"
+authors = ["RustChain Contributors"]
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+default = []
+audio-capture = []  # Requires cpal/rodio for real audio capture
