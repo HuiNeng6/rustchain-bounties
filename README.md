@@ -40,6 +40,8 @@ Browse [open bounties](https://github.com/Scottcjn/rustchain-bounties/issues?q=i
 ### 2. Claim It
 Comment on the issue: **"I would like to work on this"**
 
+> ⚠️ **Important**: Before submitting, read the [Anti-Farming Rules (#452)](https://github.com/Scottcjn/rustchain-bounties/issues/452) to avoid disqualification.
+
 ### 3. Submit Your Work
 - **Code bounties**: Open a PR to the relevant repo and link it in the issue
 - **Content bounties**: Post your content and link it in the issue
