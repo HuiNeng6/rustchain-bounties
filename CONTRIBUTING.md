@@ -1,141 +1,127 @@
-# Contributing to Rustchain
+# Contributing to RustChain Bounties
 
-Thank you for your interest in contributing to Rustchain! Every contribution helps build a stronger Proof-of-Antiquity blockchain ecosystem.
+Thank you for your interest in contributing to the RustChain ecosystem! This guide will help you understand how to participate in our bounty program.
 
-## 🚀 Quick Start
+## Table of Contents
 
-1. **Fork** the repository
-2. **Clone** your fork locally
-3. **Create a branch** for your changes (`git checkout -b feature/my-contribution`)
-4. **Make your changes** and test them
-5. **Commit** with a clear message
-6. **Push** to your fork and open a **Pull Request**
-
-## 💰 Earning RTC Tokens
-
-All merged contributions earn RTC tokens! See the bounty tiers:
-
-| Tier | Reward | Examples |
-| ---- | ------ | -------- |
-| Micro | 1-10 RTC | Typo fix, small docs, simple test |
-| Standard | 20-50 RTC | Feature, refactor, new endpoint |
-| Major | 75-100 RTC | Security fix, consensus improvement |
-| Critical | 100-150 RTC | Vulnerability patch, protocol upgrade |
-
-Browse [open bounties](https://github.com/Scottcjn/rustchain-bounties/issues) to find tasks with specific RTC rewards.
-
-## 📋 Types of Contributions
-
-### Code
-- Bug fixes and feature implementations
-- Performance improvements
-- Test coverage improvements
-- CI/CD pipeline enhancements
-
-### Documentation
-- README improvements
-- API documentation
-- Tutorials and guides
-- Code comments and docstrings
-- Translations (Spanish, Chinese, Japanese, etc.)
-
-### Community
-- Bug reports with reproduction steps
-- Feature requests with use cases
-- Code reviews on open PRs
-- Helping others in [Discord](https://discord.gg/VqVVS2CW9Q)
-
-## 🔧 Development Setup
-
-```bash
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/rustchain-bounties.git
-cd rustchain-bounties
-
-# Install dependencies
-npm install  # or cargo build (for Rust components)
-
-# Run tests
-npm test     # or cargo test
-```
-
-## 📝 Commit Message Convention
-
-We follow [Conventional Commits](https://www.conventionalcommits.org/):
-
-```
-<type>(<scope>): <description>
-
-[optional body]
-[optional footer]
-```
-
-**Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style (formatting, no logic change)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks (CI, dependencies)
-- `security`: Security-related changes
-
-**Examples:**
-```
-feat(bridge): add wRTC balance verification endpoint
-fix(consensus): correct PoA difficulty adjustment calculation
-docs(readme): add POWER8 hardware requirements section
-test(api): add integration tests for mining endpoints
-```
-
-## 🔍 Pull Request Guidelines
-
-### Before Submitting
-- [ ] Code follows the project's style guidelines
-- [ ] Self-review of your changes completed
-- [ ] Tests pass locally
-- [ ] New code includes appropriate tests
-- [ ] Documentation updated if needed
-
-### PR Description Template
-```markdown
-## What does this PR do?
-Brief description of changes.
-
-## Why?
-Motivation and context.
-
-## How to test?
-Steps to verify the changes work.
-
-## Related Issues
-Closes #<issue_number>
-```
-
-### Review Process
-1. A maintainer will review your PR within 48-72 hours
-2. Address any requested changes
-3. Once approved, a maintainer will merge your PR
-4. RTC tokens will be distributed after merge
-
-## 🎯 Good First Issues
-
-New to Rustchain? Start with issues labeled [`good first issue`](https://github.com/Scottcjn/Rustchain/labels/good%20first%20issue). These are specifically designed for newcomers.
-
-## ⚖️ Code of Conduct
-
-By participating in this project, you agree to maintain a respectful, inclusive, and harassment-free environment. Be kind, be constructive, and help each other grow.
-
-## 📬 Getting Help
-
-- **Discord**: [Join our server](https://discord.gg/VqVVS2CW9Q)
-- **GitHub Issues**: For bugs and feature requests
-- **Discussions**: For questions and ideas
-
-## License
-
-By contributing, you agree that your contributions will be licensed under the same license as the project (Apache 2.0).
+- [How to Find Bounties](#how-to-find-bounties)
+- [Claim Format](#claim-format)
+- [Proof Requirements](#proof-requirements)
+- [Wallet Address Format](#wallet-address-format)
+- [Anti-Farming Rules](#anti-farming-rules)
+- [Getting Help](#getting-help)
 
 ---
 
-**Happy contributing! Every PR brings Rustchain closer to its vision.** 🦀⛓️
+## How to Find Bounties
+
+Browse open bounties at: https://github.com/Scottcjn/rustchain-bounties/issues?q=is%3Aissue+is%3Aopen+label%3Abounty
+
+### Bounty Categories
+
+| Difficulty | Label | Typical Reward |
+|-----------|-------|---------------|
+| Beginner | `good first issue` | 1-5 RTC |
+| Standard | `standard` | 5-25 RTC |
+| Major | `major` | 25-100 RTC |
+| Critical | `critical`, `red-team` | 100-200 RTC |
+
+**Tip**: Start with `good first issue` bounties if you're new!
+
+---
+
+## Claim Format
+
+To claim a bounty, comment on the issue with:
+
+```
+I would like to work on this.
+```
+
+### What Happens Next
+
+1. The bounty maintainer will acknowledge your claim
+2. You can begin working on the task
+3. Submit your work when complete
+
+---
+
+## Proof Requirements
+
+Different bounty types require different proof:
+
+### Code Bounties
+- Open a Pull Request to the relevant repository
+- Link the PR in the bounty issue comment
+- Ensure PR passes CI checks if applicable
+
+### Content Bounties
+- Post your content (article, video, tutorial)
+- Link the published content in the bounty issue
+- Include engagement metrics if required
+
+### Star/Propagation Bounties
+- Star the repository or share on social media
+- Provide screenshot proof
+- Include your wallet address for payout
+
+### Integration Bounties
+- Demonstrate working integration
+- Provide documentation or examples
+- Link to working code/demo
+
+---
+
+## Wallet Address Format
+
+### RTC Wallet
+
+Your RTC wallet address format:
+```
+RTC<58 characters>
+```
+
+Example:
+```
+RTC589778251020176f64f9c1d11c4041c77dac3867
+```
+
+### Getting a Wallet
+
+If you don't have a wallet yet, comment on any bounty and we will help you set one up.
+
+---
+
+## Anti-Farming Rules
+
+⚠️ **IMPORTANT**: Read the [Anti-Farming Rules (#452)](https://github.com/Scottcjn/rustchain-bounties/issues/452) before submitting!
+
+Key rules:
+- Do not create fake accounts or use bots
+- Do not submit duplicate or low-quality work
+- Do not manipulate engagement metrics
+- All submissions must be genuine, quality work
+
+Violations result in disqualification and potential ban.
+
+---
+
+## Getting Help
+
+- **Discord**: [discord.gg/VqVVS2CW9Q](https://discord.gg/VqVVS2CW9Q)
+- **Wallet Setup**: Comment on any bounty issue
+- **Questions**: Ask in the bounty issue comments
+
+---
+
+## Quick Checklist Before Submitting
+
+- [ ] I have read the anti-farming rules (#452)
+- [ ] I have claimed the bounty properly
+- [ ] My work meets the bounty requirements
+- [ ] I have provided clear proof
+- [ ] My wallet address is correct
+
+---
+
+Thank you for contributing to RustChain! Every bounty helps grow the ecosystem.
